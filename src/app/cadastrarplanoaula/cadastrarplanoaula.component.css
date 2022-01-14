@@ -1,0 +1,25 @@
+input{
+  border-radius: 20px;
+  height: 64px;
+ }
+ label{
+  color: rgb(132, 171, 179);
+}
+h2{
+  margin-left: 12px;
+  color: rgb(132, 171, 179);
+}
+button{
+  height: 85px;
+  width: 100%;
+  border-radius: 34px;
+  font-size: 25px;
+  background-color: rgba(21, 195, 214, 1);
+}
+.btn2{
+  height: 85px;
+  width: 100%;
+  border-radius: 34px;
+  font-size: 25px;
+  background-color: rgba(57, 204, 131, 1)
+}

@@ -1,0 +1,34 @@
+.fa{
+  font-size: 1.5cm;
+  padding-top: 10px;
+}
+
+.card-text{
+  font-size: 0.9cm;
+}
+.card-text1{
+  font-size: 0.7cm;
+}
+ .card{
+ display: flex;
+ align-items: center;
+ background-color: rgba(196, 196, 196, 1);
+ border-radius: 10%;
+ }
+
+
+ .containerr{
+display: flex;
+justify-content: center;
+ }
+ .containernav{
+  background-image: url('https://i.imgur.com/zK63G2xl.jpg');
+ }
+ .imagem{
+ margin-top: 80px;
+ border-radius: 50%;
+ }
+ a{
+   text-decoration: none;
+   color: black;
+ }

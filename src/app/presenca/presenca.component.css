@@ -1,0 +1,24 @@
+
+select{
+  border-radius: 20px;
+  height: 64px;
+ }
+ label{
+   color: rgb(132, 171, 179);
+ }
+ .imagem{
+  margin-top: 10px;
+  border-radius: 50%;
+  }
+ .presenca p{
+   font-size: 25px;
+   color: rgb(132, 171, 179);
+ }
+ 
+ button{
+  height: 85px;
+  width: 100%;
+  border-radius: 34px;
+  font-size: 25px;
+  background-color: rgba(21, 195, 214, 1);
+}
