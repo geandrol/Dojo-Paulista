@@ -9,7 +9,7 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+tipoUserario = environment.tipoUserario
 nome = environment.nome
 foto = environment.foto
 
@@ -20,10 +20,16 @@ foto = environment.foto
 
   ngOnInit() {
 
+
+
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
-
+    console.log(this.tipoUserario)
+    console.log(this.nome)
+    console.log(this.foto)
   }
+
+
 
 }
