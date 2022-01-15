@@ -33,3 +33,9 @@ opacity: 0;
 img{
   border-radius: 50%;
  }
+ .padl{
+   padding-left: 70px;
+ }
+ .faixa{
+   color: yellow;
+ }
