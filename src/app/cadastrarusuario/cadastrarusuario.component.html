@@ -47,11 +47,11 @@
   <div class="col">
     <div class="form-group col-md-4">
       <label for="inputState">Tipo de Usuário</label>
-      <select id="inputState" class="form-control"(change)='tipoUser($event)'>
-        <option selected></option>
-        <option>SENSEI</option>
-        <option>ALUNO</option>
-        <option>ADMINISTRACAO</option>
+      <select id="tipo" class="form-control"(change)='tipoUser($event)'>
+        <option>Selecione um tipo de usuário:</option>
+        <option value="SENSEI">SENSEI</option>
+        <option value="ADMINISTRAÇAO">ADMINISTRAÇAO</option>
+        <option value="ALUNO">ALUNO</option>
       </select>
     </div>
   </div>
@@ -59,6 +59,19 @@
 <hr>
 
 <div class="row">
+  <div class="col">
+    <div class="form-group col-md-4">
+      <label for="inputState">Pcd?</label>
+      <select id="tipo" class="form-control"(change)='Pcd($event)'>
+        <option>Selecione sim ou não</option>
+        <option value="true">Sim</option>
+        <option value="false">Não</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row">
     <div class="col-2 pl-4 ml-2 d-flex align-items-center">
       <label for="inputState">PCD</label>
     </div>
@@ -66,13 +79,13 @@
       <p>Não</p>
     </div>
     <div class="col-3 p-0">
-      <input type="checkbox" id="switch" class="checkbox"/>
+      <input type="checkbox" id="switch" class="checkbox" (click)="pcd()"/>
         <label for="switch" class="toggle"></label>
     </div>
     <div class="col pl-1">
       <p>Sim</p>
     </div>
-</div>
+</div> -->
 
 <div class="row">
   <div class="col">

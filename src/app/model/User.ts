@@ -4,7 +4,7 @@ export class User{
   public foto: string
   public usuario: string
   public senha: string
-  public tipoUsuario: string
+  public tipoUserario: string
   public tipoPcd: string
   public pcd: boolean
 }

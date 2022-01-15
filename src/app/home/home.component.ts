@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+nome = environment.nome
+foto = environment.foto
 
-  ngOnInit(): void {
+  constructor(
+    private router: Router,
+    public authService: AuthService
+  ) { }
+
+  ngOnInit() {
+
+    if(environment.token == ''){
+      this.router.navigate(['/login'])
+    }
+
   }
 
 }

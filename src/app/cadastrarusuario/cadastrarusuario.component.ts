@@ -12,6 +12,7 @@ export class CadastrarusuarioComponent implements OnInit {
 
   user: User = new User
   tipoUsuario: string
+  tipoPcd: boolean
 
   constructor(
     private authService: AuthService,
@@ -26,8 +27,15 @@ export class CadastrarusuarioComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
+  Pcd(event: any){
+    this.tipoPcd = event.target.value
+  }
   cadastrar(){
-    this.user.tipoUsuario = this.tipoUsuario
+    this.user.tipoUserario = this.tipoUsuario
+    this.user.pcd = this.tipoPcd
+    if(this.user.foto.indexOf('.jpg') == -1 && this.user.foto.indexOf('.png') == -1 ){
+        alert('formato de foto invalido use jpg ou png')
+    }else
 
        this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp

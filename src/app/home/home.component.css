@@ -12,7 +12,7 @@
  .card{
  display: flex;
  align-items: center;
- background-color: rgba(196, 196, 196, 1);
+ background-color: #c4c4c4;
  border-radius: 10%;
  }
 
@@ -22,7 +22,7 @@ display: flex;
 justify-content: center;
  }
  .containernav{
-  background-image: url('https://i.imgur.com/zK63G2xl.jpg');
+  background-image: url('https://i.imgur.com/I0kY71j.png');
  }
  .imagem{
  margin-top: 80px;
