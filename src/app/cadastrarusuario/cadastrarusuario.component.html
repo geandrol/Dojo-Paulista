@@ -62,7 +62,7 @@
   <div class="col">
     <div class="form-group col-md-4">
       <label for="inputState">Pcd?</label>
-      <select id="tipo" class="form-control"(change)='Pcd($event)'>
+      <select id="tipo" class="form-control"(change)='Pcd($event)' onchange="$('#target').toggle();" onfocus="this.selectedIndex = -1;" >
         <option>Selecione sim ou não</option>
         <option value="true">Sim</option>
         <option value="false">Não</option>
@@ -87,7 +87,7 @@
     </div>
 </div> -->
 
-<div class="row">
+<div class="row" id="target" style="display: none">
   <div class="col">
     <div class="form-group col-md-4">
       <label for="inputState">tipo PCD</label>
