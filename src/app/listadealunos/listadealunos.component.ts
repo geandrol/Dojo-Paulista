@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../model/User';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-listadealunos',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadealunosComponent implements OnInit {
 
-  constructor() { }
+  user: User = new User()
+  listaUser: User[]
 
-  ngOnInit(): void {
+  constructor(
+
+   public authService: AuthService
+  ) { }
+
+  ngOnInit() {
+
+    this.findAllUser()
+  }
+
+  findAllUser(){
+    this.authService.getAllUser().subscribe((resp: User[]) => {
+      this.listaUser = resp
+   console.log(resp)
+    })
   }
 
 }

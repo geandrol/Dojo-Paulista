@@ -26,10 +26,11 @@ button{
   background-color: rgba(57, 204, 131, 1)
 }
 
-.im{
-height: 456px;
-opacity: 0;
-}
+.imagem{
+  border-radius: 50%;
+  padding-left: 1px;
+  margin: 1px;
+  }
 img{
   border-radius: 50%;
  }
@@ -39,3 +40,6 @@ img{
  .faixa{
    color: yellow;
  }
+.linha{
+flex-flow: wrap;
+}

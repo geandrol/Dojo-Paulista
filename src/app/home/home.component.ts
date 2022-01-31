@@ -20,16 +20,17 @@ foto = environment.foto
 
   ngOnInit() {
 
-
-
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
-    console.log(this.tipoUserario)
-    console.log(this.nome)
-    console.log(this.foto)
   }
 
-
+  sair(){
+    this.router.navigate(['/home'])
+    environment.token = ''
+    environment.nome = ''
+    environment.foto = ''
+    environment.id = 0
+  }
 
 }

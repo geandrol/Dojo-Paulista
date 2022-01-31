@@ -33,10 +33,6 @@ export class CadastrarusuarioComponent implements OnInit {
   cadastrar(){
     this.user.tipoUserario = this.tipoUsuario
     this.user.pcd = this.tipoPcd
-    if(this.user.foto.indexOf('.jpg') == -1 && this.user.foto.indexOf('.png') == -1 ){
-        alert('formato de foto invalido use jpg ou png')
-    }else
-
        this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/entrar'])

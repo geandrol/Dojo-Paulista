@@ -38,10 +38,14 @@
 
   .imagem{
     border-radius: 50%;
+    padding-left: 8px;
+    margin: 1px;
     }
     p{
-      font-size: 45px;
+      font-size: 35px;
       color: rgb(132, 171, 179);
+      margin-top: 7px;
+
     }
     button{
       height: 85px;

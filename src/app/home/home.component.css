@@ -37,3 +37,15 @@ justify-content: center;
    margin-top: 25px;
    color: white;
  }
+
+ button{
+  height: 85px;
+  width: 100%;
+  border-radius: 34px;
+  font-size: 25px;
+  background-color: rgb(223, 79, 43);
+}
+
+.mp{
+  margin-top: 15px;
+}
