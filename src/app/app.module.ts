@@ -15,6 +15,8 @@ import { CadastraraulaComponent } from './cadastraraula/cadastraraula.component'
 import { CadastrarplanoaulaComponent } from './cadastrarplanoaula/cadastrarplanoaula.component';
 import { ListadealunosComponent } from './listadealunos/listadealunos.component';
 import { CadastrarusuarioComponent } from './cadastrarusuario/cadastrarusuario.component';
+import { EditarUsuarioComponent } from './editar/editar-usuario/editar-usuario.component';
+import { ApagarUsuarioComponent } from './apagar/apagar-usuario/apagar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { CadastrarusuarioComponent } from './cadastrarusuario/cadastrarusuario.c
     CadastraraulaComponent,
     CadastrarplanoaulaComponent,
     ListadealunosComponent,
-    CadastrarusuarioComponent
+    CadastrarusuarioComponent,
+    EditarUsuarioComponent,
+    ApagarUsuarioComponent
   ],
   imports: [
     BrowserModule,

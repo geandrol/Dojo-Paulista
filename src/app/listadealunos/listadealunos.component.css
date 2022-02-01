@@ -37,8 +37,8 @@ img{
  .padl{
    padding-left: 70px;
  }
- .faixa{
-   color: yellow;
+ .faixa-preta{
+   color: rgb(255, 16, 16);
  }
 .linha{
 flex-flow: wrap;

@@ -30,6 +30,7 @@ export class CadastrarusuarioComponent implements OnInit {
   Pcd(event: any){
     this.tipoPcd = event.target.value
   }
+
   cadastrar(){
     this.user.tipoUserario = this.tipoUsuario
     this.user.pcd = this.tipoPcd

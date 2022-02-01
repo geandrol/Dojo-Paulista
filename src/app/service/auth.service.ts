@@ -37,5 +37,8 @@ export class AuthService {
   getByIdUser(id: number): Observable<User>{
     return this.http.get<User>(`https://dojopaulista.herokuapp.com/usuarios/${id}`)
   }
+    apagar(id: number){
+       return this.http.delete(`https://dojopaulista.herokuapp.com/usuarios/${id}`, this.token)
+}
 
 }

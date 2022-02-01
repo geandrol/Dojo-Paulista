@@ -13,16 +13,20 @@
   <hr>
   <div class="row">
     <div class="col-2 pl-4 d-flex justify-content-center linha">
+      <div>
     <img  *ngFor='let item of listaUser' src="{{item.foto}}" alt="" width="45px" height="45px">
+  </div>
     </div>
     <div class="col-4 pl-2 linha">
          <p *ngFor='let item of listaUser'>{{item.nome}}</p>
     </div>
     <div class="col-2 pl-4">
-      <i class="fa fa-minus faixa" aria-hidden="true"></i>
+      <i  *ngFor='let item of listaUser'   [ngClass]="['fa', 'fa-minus']" [ngStyle]="getFaixa(item.tipoFaixa)" aria-hidden="true"></i>
     </div>
-    <div class="col-2 pl-4">
+    <div class="col-2 pl-4" >
+      <a *ngFor='let item of listaUser'  [routerLink]="['/editar-usuario',item.id]">
       <i class="fa fa-pencil" aria-hidden="true"></i>
+    </a>
     </div>
     <div class="col-2 pl-0">
       <div class="ired"><i class="fa fa-trash" aria-hidden="true"></i></div>

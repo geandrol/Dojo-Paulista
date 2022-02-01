@@ -1,0 +1,122 @@
+<div class="container mt-5">
+
+
+  <div class="row ">
+    <div class="col">
+      <h2>Cadastrar Usuario</h2>
+    </div>
+ </div>
+<hr>
+  <div class="row">
+    <div class="col">
+      <div class="form-group col-md-4">
+        <label for="inputState">Nome</label>
+        <input [(ngModel)]='user.nome' type="text" class="form-control">
+      </div>
+    </div>
+ </div>
+
+ <div class="row">
+  <div class="col">
+    <div class="form-group col-md-4">
+      <label for="inputState">Link da foto</label>
+      <input [(ngModel)]='user.foto' type="text" class="form-control">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="form-group col-md-4">
+      <label for="inputState">Usuario</label>
+      <input [(ngModel)]='user.usuario' type="text" class="form-control">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+<div class="col">
+  <div class="form-group col-md-4">
+    <label for="inputState">Senha</label>
+    <input [(ngModel)]='user.senha' type="text" class="form-control">
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="form-group col-md-4">
+      <label for="inputState">Tipo de Usuário</label>
+      <select id="tipo" class="form-control"(change)='tipoUser($event)'>
+        <option>Selecione o tipo de usuário:</option>
+        <option value="SENSEI">SENSEI</option>
+        <option value="ADMINISTRAÇAO">ADMINISTRAÇAO</option>
+        <option value="ALUNO">ALUNO</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="form-group col-md-4">
+      <label for="inputState">Cor da Faixa</label>
+      <select id="tipo" class="form-control">
+        <option>Selecione a cor da faixa:</option>
+        <option value="BRANCA">BRANCA</option>
+        <option value="AZUL">AZUL</option>
+        <option value="VERMELHA">VERMELHA</option>
+        <option value="LARANJA">LARANJA</option>
+        <option value="VERDE">VERDE</option>
+        <option value="ROXA">ROXA</option>
+        <option value="MARROM">MARROM</option>
+        <option value="PRETA">PRETA</option>
+      </select>
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <div class="form-group col-md-4">
+      <label for="inputState">Pcd? "selecione sim ou não"</label>
+      <select id="tipo" class="form-control"(change)='Pcd($event)' onchange="$('#target').toggle();">
+        <option value="false">Não</option>
+        <option value="true">Sim</option>
+
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-2 pl-4 ml-2 d-flex align-items-center">
+      <label for="inputState">PCD</label>
+    </div>
+    <div class="col-1 p-0">
+      <p>Não</p>
+    </div>
+    <div class="col-3 p-0">
+      <input type="checkbox" id="switch" class="checkbox" (click)="pcd()"/>
+        <label for="switch" class="toggle"></label>
+    </div>
+    <div class="col pl-1">
+      <p>Sim</p>
+    </div>
+</div> -->
+
+<div class="row" id="target" style="display: none">
+  <div class="col">
+    <div class="form-group col-md-4">
+      <label for="inputState">tipo PCD</label>
+      <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+  </div>
+</div>
+
+<div class="mp pl-4 pr-4  button2"><button type="button" class="btn2 btn-info" (click)="atualizar()">Cadastrar</button></div>
+<div class="mp pl-4 pr-4 mt-2 mb-3"><button type="button" class="btn btn-info" routerLink="/home">Voltar</button></div>
+
+
+

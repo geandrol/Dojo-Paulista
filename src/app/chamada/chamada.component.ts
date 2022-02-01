@@ -10,8 +10,9 @@ import { AuthService } from '../service/auth.service';
 export class ChamadaComponent implements OnInit {
 
   user: User = new User()
-  listaUser: User[]
+  listaUser: User[] = []
   img: string
+  // 'https://img.freepik.com/vetores-gratis/icone-de-perfil-de-avatar_188544-4755.jpg?size=338&ext=jpg'
 
   constructor(
 
@@ -24,9 +25,14 @@ export class ChamadaComponent implements OnInit {
   }
 
   findAllUser(){
-    this.authService.getAllAluno ().subscribe((resp: User[]) => {
-      this.listaUser = resp
-   console.log(resp)
+    this.authService.getAllAluno().subscribe((resp: User[]) => {
+         resp.forEach(item => {
+        if (!item.foto){
+            item.foto = "https://img.freepik.com/vetores-gratis/icone-de-perfil-de-avatar_188544-4755.jpg?size=338&ext=jpg"
+        }
+        this.listaUser.push(item)
+
+      });
     })
   }
 

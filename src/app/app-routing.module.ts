@@ -5,6 +5,7 @@ import { CadastraraulaComponent } from './cadastraraula/cadastraraula.component'
 import { CadastrarplanoaulaComponent } from './cadastrarplanoaula/cadastrarplanoaula.component';
 import { CadastrarusuarioComponent } from './cadastrarusuario/cadastrarusuario.component';
 import { ChamadaComponent } from './chamada/chamada.component';
+import { EditarUsuarioComponent } from './editar/editar-usuario/editar-usuario.component';
 import { HomeComponent } from './home/home.component';
 import { ListadealunosComponent } from './listadealunos/listadealunos.component';
 import { LoginComponent } from './login/login.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'cadastraraula', component: CadastraraulaComponent},
   {path:'cadastrarplanoaula', component: CadastrarplanoaulaComponent},
   {path:'cadastrarusuario', component: CadastrarusuarioComponent},
+  {path: 'editar-usuario/:id', component: EditarUsuarioComponent}
 ];
 
 @NgModule({

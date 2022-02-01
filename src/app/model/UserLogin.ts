@@ -6,4 +6,5 @@ export class UserLogin{
   public usuario: string
   public senha: string
   public tipoUserario: string
+  public tipoFaixa: string
 }

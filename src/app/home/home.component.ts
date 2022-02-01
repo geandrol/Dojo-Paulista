@@ -26,7 +26,7 @@ foto = environment.foto
   }
 
   sair(){
-    this.router.navigate(['/home'])
+    this.router.navigate(['/login'])
     environment.token = ''
     environment.nome = ''
     environment.foto = ''

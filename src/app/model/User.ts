@@ -7,4 +7,5 @@ export class User{
   public tipoUserario: string
   public tipoPcd: string
   public pcd: boolean
+  public tipoFaixa: string
 }

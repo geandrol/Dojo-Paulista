@@ -1,28 +1,22 @@
 <div class="container mt-5">
-
   <div class="row d-flex align-content-center">
     <div class="col-3">
       <div class="row">
-      <img *ngFor='let item of listaUser'
-        class="imagem"
-        src="{{item.foto}}"
-        alt=""
-        width="70px"
-      />
+        <img *ngFor="let item of listaUser" class="imagem" src="{{ item.foto }}" alt="" width="70px"/>
+      </div>
     </div>
+    <div class="col-5 pl-1 m-0">
+      <div class="row">
+        <p *ngFor="let item of listaUser">{{ item.nome }}</p>
+      </div>
     </div>
-    <div class="col-5 pl-1 m-0 " >
-     <div class="row">
-      <p *ngFor='let item of listaUser'>{{item.nome}}</p>
-     </div>
-  </div>
     <div class="col-3 mt-2 pl-3 pr-0">
       <input type="checkbox" id="switch" class="checkbox" />
       <label for="switch" class="toggle"></label>
     </div>
   </div>
-
 </div>
 
-<div class="mp pl-4 pr-4"><button type="button" class="btn btn-info" routerLink="/home">Voltar</button></div>
-
+<div class="mp pl-4 pr-4">
+  <button type="button" class="btn btn-info" routerLink="/home">Voltar</button>
+</div>
