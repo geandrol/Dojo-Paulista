@@ -3,38 +3,103 @@
     <div class="col-6 padl">
       <p>Aluno</p>
     </div>
-    <div class="col-2 ">
+    <div class="col-2">
       <p>Faixa</p>
     </div>
     <div class="col pl-4">
       <p>Ações</p>
     </div>
   </div>
-  <hr>
+  <hr />
   <div class="row">
     <div class="col-2 pl-4 d-flex justify-content-center linha">
       <div>
-    <img  *ngFor='let item of listaUser' src="{{item.foto}}" alt="" width="45px" height="45px">
-  </div>
+        <img
+          class="mb-2"
+          *ngFor="let item of listaUser"
+          src="{{ item.foto }}"
+          alt=""
+          width="45px"
+          height="45px"
+        />
+      </div>
     </div>
-    <div class="col-4 pl-2 linha">
-         <p *ngFor='let item of listaUser'>{{item.nome}}</p>
+    <div class="col-4 pl-2 pt-1 linha">
+      <p *ngFor="let item of listaUser">{{ item.nome }}</p>
     </div>
     <div class="col-2 pl-4">
-      <i  *ngFor='let item of listaUser'   [ngClass]="['fa', 'fa-minus']" [ngStyle]="getFaixa(item.tipoFaixa)" aria-hidden="true"></i>
+      <!-- <i  *ngFor='let item of listaUser'   [ngClass]="['fa', 'fa-minus']" [ngStyle]="getFaixa(item.tipoFaixa)" aria-hidden="true"></i> -->
+
+      <div *ngFor="let item of listaUser">
+        <div *ngIf="item.tipoFaixa == 'BRANCA'">
+          <div class="mt-2 mb-4 " style="background-color: rgb(255, 255, 255)">
+            <p class="p">.</p>
+          </div>
+        </div>
+        <div *ngIf="item.tipoFaixa == 'AZUL'">
+          <div class="mt-2 mb-4 p" style="background-color: rgb(11, 74, 248)">
+            <p class="p">.</p>
+          </div>
+        </div>
+        <div *ngIf="item.tipoFaixa == 'AMARELA'">
+          <div class="mt-2 mb-4 p" style="background-color: rgb(230, 255, 2)">
+            <p class="p">.</p>
+          </div>
+        </div>
+        <div *ngIf="item.tipoFaixa == 'VERMELHA'">
+          <div class="mt-2 mb-4 p" style="background-color: red">
+            <p class="p">.</p>
+          </div>
+        </div>
+        <div *ngIf="item.tipoFaixa == 'LARANJA'">
+          <div class="mt-2 mb-4 p" style="background-color: rgb(241, 141, 10)">
+            <p class="p">.</p>
+          </div>
+        </div>
+        <div *ngIf="item.tipoFaixa == 'VERDE'">
+          <div class="mt-2 mb-4 p" style="background-color: rgb(6, 168, 0)">
+            <p class="p">.</p>
+          </div>
+        </div>
+        <div *ngIf="item.tipoFaixa == 'ROXA'">
+          <div class="mt-2 mb-4 p" style="background-color: rgb(126, 0, 131)">
+            <p class="p">.</p>
+          </div>
+        </div>
+        <div *ngIf="item.tipoFaixa == 'MARROM'">
+          <div class="mt-2 mb-4 p" style="background-color: rgb(80, 51, 51)">
+            <p class="p">.</p>
+          </div>
+        </div>
+        <div *ngIf="item.tipoFaixa == 'PRETA'">
+          <div class="mt-2 mb-4 p" style="background-color: rgb(0, 0, 0)">
+            <p class="p">.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-2 pl-4" >
-      <a *ngFor='let item of listaUser'  [routerLink]="['/editar-usuario',item.id]">
-      <i class="fa fa-pencil" aria-hidden="true"></i>
-    </a>
+    <div class="col-2 pl-4 ">
+      <a
+        *ngFor="let item of listaUser"
+        [routerLink]="['/editar-usuario', item.id]"
+      >
+        <i class="fa fa-pencil mt-1 mb-2" aria-hidden="true"></i>
+      </a>
     </div>
     <div class="col-2 pl-0">
-      <div class="ired"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      <a *ngFor="let item of listaUser"  [routerLink]="['/apagar-usuario', item.id]">
+      <div class="ired"><i class="fa fa-trash  mt-1 mb-2" aria-hidden="true"></i></div>
+    </a>
     </div>
   </div>
-<hr>
+  <hr />
 </div>
 
-
-<div class="mp pl-4 pr-4"><button type="button" class="btn btn-info" routerLink="/home">Voltar</button></div>
-<div class="mp pl-4 pr-4 mt-2 button2"><button type="button" class="btn2 btn-info" routerLink="/cadastrarusuario">Novo Usuario</button></div>
+<div class="mp pl-4 pr-4">
+  <button type="button" class="btn btn-info" routerLink="/home">Voltar</button>
+</div>
+<div class="mp pl-4 pr-4 mt-2 button2">
+  <button type="button" class="btn2 btn-info" routerLink="/cadastrarusuario">
+    Novo Usuario
+  </button>
+</div>

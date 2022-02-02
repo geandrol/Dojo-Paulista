@@ -26,6 +26,10 @@ export class AuthService {
     return this.http.post<User>('https://dojopaulista.herokuapp.com/usuarios/cadastrar', user)
   }
 
+  atualizar(user: User): Observable<User>{
+    return this.http.put<User>('https://dojopaulista.herokuapp.com/usuarios/atualizar', user)
+  }
+
   getAllUser(): Observable<User[]>{
     return this.http.get<User[]>('https://dojopaulista.herokuapp.com/usuarios/all', this.token)
   }

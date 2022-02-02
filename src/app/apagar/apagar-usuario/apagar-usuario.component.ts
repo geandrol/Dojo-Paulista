@@ -36,4 +36,11 @@ idUser: number
         })
   }
 
+  apagar(){
+    this.authService.apagar(this.idUser).subscribe(()=>{
+      alert('Tema apagado com sucesso!')
+      this.router.navigate(['/listadealunos'])
+    })
+  }
+
 }

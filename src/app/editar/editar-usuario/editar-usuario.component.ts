@@ -14,6 +14,7 @@ export class EditarUsuarioComponent implements OnInit {
   tipoUsuario: string
   tipoPcd: boolean
   idUser: number
+  tipoFaixas: string
 
   constructor(
     private authService: AuthService,
@@ -36,6 +37,11 @@ export class EditarUsuarioComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
+  tipoFaixa(event: any){
+    this.tipoFaixas = event.target.value
+  }
+
+
   Pcd(event: any){
     this.tipoPcd = event.target.value
   }
@@ -43,15 +49,16 @@ export class EditarUsuarioComponent implements OnInit {
   atualizar(){
     this.user.tipoUserario = this.tipoUsuario
     this.user.pcd = this.tipoPcd
-       this.authService.cadastrar(this.user).subscribe((resp: User) => {
+    this.user.tipoFaixa = this.tipoFaixas
+       this.authService.atualizar(this.user).subscribe((resp: User) => {
         this.user = resp
-        alert('Usuário cadastrado com sucesso!')
+        alert('Usuário atualizado com sucesso!')
         environment.token = ''
         environment.nome = ''
         environment.foto = ''
         environment.id = 0
 
-        this.router.navigate(['/login'])
+        this.router.navigate(['/home'])
       })
     }
 

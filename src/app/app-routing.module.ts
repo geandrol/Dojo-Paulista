@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ApagarUsuarioComponent } from './apagar/apagar-usuario/apagar-usuario.component';
 import { AulasComponent } from './aulas/aulas.component';
 import { CadastraraulaComponent } from './cadastraraula/cadastraraula.component';
 import { CadastrarplanoaulaComponent } from './cadastrarplanoaula/cadastrarplanoaula.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path:'cadastraraula', component: CadastraraulaComponent},
   {path:'cadastrarplanoaula', component: CadastrarplanoaulaComponent},
   {path:'cadastrarusuario', component: CadastrarusuarioComponent},
-  {path: 'editar-usuario/:id', component: EditarUsuarioComponent}
+  {path: 'editar-usuario/:id', component: EditarUsuarioComponent},
+  {path: 'apagar-usuario/:id', component: ApagarUsuarioComponent}
 ];
 
 @NgModule({

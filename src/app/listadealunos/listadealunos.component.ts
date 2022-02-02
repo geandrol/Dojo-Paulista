@@ -26,7 +26,7 @@ export class ListadealunosComponent implements OnInit {
   }
 
   findAllUser(){
-    this.authService.getAllUser().subscribe((resp: User[]) => {
+    this.authService.getAllAluno().subscribe((resp: User[]) => {
          resp.forEach(item => {
         if (!item.foto){
             item.foto = "https://img.freepik.com/vetores-gratis/icone-de-perfil-de-avatar_188544-4755.jpg?size=338&ext=jpg"

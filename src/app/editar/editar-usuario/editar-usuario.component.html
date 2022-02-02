@@ -61,7 +61,7 @@
   <div class="col">
     <div class="form-group col-md-4">
       <label for="inputState">Cor da Faixa</label>
-      <select id="tipo" class="form-control">
+      <select id="tipo" class="form-control"(change)='tipoFaixa($event)'>
         <option>Selecione a cor da faixa:</option>
         <option value="BRANCA">BRANCA</option>
         <option value="AZUL">AZUL</option>
@@ -115,7 +115,7 @@
   </div>
 </div>
 
-<div class="mp pl-4 pr-4  button2"><button type="button" class="btn2 btn-info" (click)="atualizar()">Cadastrar</button></div>
+<div class="mp pl-4 pr-4  button2"><button type="button" class="btn2 btn-info" (click)="atualizar()">Atualizar</button></div>
 <div class="mp pl-4 pr-4 mt-2 mb-3"><button type="button" class="btn btn-info" routerLink="/home">Voltar</button></div>
 
 

@@ -13,6 +13,7 @@ export class CadastrarusuarioComponent implements OnInit {
   user: User = new User
   tipoUsuario: string
   tipoPcd: boolean
+  tipoFaixas: string
 
   constructor(
     private authService: AuthService,
@@ -27,6 +28,10 @@ export class CadastrarusuarioComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
+  tipoFaixa(event: any){
+    this.tipoFaixas = event.target.value
+  }
+
   Pcd(event: any){
     this.tipoPcd = event.target.value
   }
@@ -34,6 +39,7 @@ export class CadastrarusuarioComponent implements OnInit {
   cadastrar(){
     this.user.tipoUserario = this.tipoUsuario
     this.user.pcd = this.tipoPcd
+    this.user.tipoFaixa = this.tipoFaixas
        this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/entrar'])

@@ -61,10 +61,11 @@
   <div class="col">
     <div class="form-group col-md-4">
       <label for="inputState">Cor da Faixa</label>
-      <select id="tipo" class="form-control">
+      <select id="tipo" class="form-control" (change)='tipoFaixa($event)'>
         <option>Selecione a cor da faixa:</option>
         <option value="BRANCA">BRANCA</option>
         <option value="AZUL">AZUL</option>
+        <option value="AMARELA">AMARELA</option>
         <option value="VERMELHA">VERMELHA</option>
         <option value="LARANJA">LARANJA</option>
         <option value="VERDE">VERDE</option>
